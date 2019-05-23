@@ -8,6 +8,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            line-height: 1;
         }
         :root {
             --button-height: 32px;
@@ -17,7 +18,7 @@
             --border-radius: 4px;
             --color: #333;
             --border-color: #999;
-            --border-color-hover: #666;
+            --border-color-hover: red;
         }
         #app {
             margin: 20px;
@@ -25,10 +26,21 @@
         body {
             font-size: var(--font-size);
         }
+        /*.icon {width: 1em; height: 1em;}*/
+
     </style>
 </head>
 <body>
-<div id="app"><g-button></g-button></div>
+<div id="app">
+    <g-button-group>
+        <g-button>按钮</g-button>
+        <g-button icon="setting">按钮</g-button>
+    </g-button-group>
+    <g-button :loading="true">按钮</g-button>
+    <g-button :loading="true" icon="setting">按钮</g-button>
+    <g-button icon="setting" icon-position="right">按钮</g-button>
+</div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1205681_5h67kpi72r5.js"></script>
 </body>
 </html>
